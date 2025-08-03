@@ -27,6 +27,8 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
   const [showRoutes, setShowRoutes] = useState(false);
   const [showOnlyWithAlerts, setShowOnlyWithAlerts] = useState(false);
   const [companyFilter, setCompanyFilter] = useState<string>("all");
+  const [selectedTruckId, setSelectedTruckId] = useState<string | null>(null);
+  const [simulationActive, setSimulationActive] = useState(true);
 
   // Load Google Maps API
   useEffect(() => {
@@ -84,6 +86,13 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
         zoomControl: true,
       });
 
+      // Add map click listener to clear selection
+      map.addListener("click", () => {
+        clearAllRoutes();
+        setSelectedTruckId(null);
+        selectTruck(null);
+      });
+
       mapInstanceRef.current = map;
       setIsMapLoaded(true);
 
@@ -94,6 +103,46 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
 
     loadGoogleMaps();
   }, [onMapLoad]);
+
+  // Truck movement simulation
+  useEffect(() => {
+    if (!simulationActive) return;
+
+    const interval = setInterval(() => {
+      const { trucks: currentTrucks, updateTruckPosition } =
+        useTruckStore.getState();
+
+      currentTrucks.forEach((truck) => {
+        if (truck.status === "moving") {
+          // Calculate movement towards destination
+          const origin = truck.currentPosition;
+          const destination = truck.destination;
+
+          // Simple linear interpolation for movement
+          const progress = 0.001; // Small movement step
+          const newLat = origin.lat + (destination.lat - origin.lat) * progress;
+          const newLng = origin.lng + (destination.lng - origin.lng) * progress;
+
+          // Calculate heading (direction) based on movement
+          const deltaLat = destination.lat - origin.lat;
+          const deltaLng = destination.lng - origin.lng;
+          const heading = Math.atan2(deltaLng, deltaLat) * (180 / Math.PI);
+
+          // Update truck position and heading
+          updateTruckPosition(truck.id, {
+            lat: newLat,
+            lng: newLng,
+            timestamp: new Date().toISOString(),
+          });
+
+          // Update heading in truck data
+          truck.heading = (heading + 90) % 360; // Adjust for truck icon orientation
+        }
+      });
+    }, 2000); // Update every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [simulationActive, selectTruck]);
 
   // Update truck markers
   useEffect(() => {
@@ -134,6 +183,9 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
         lng: truck.currentPosition.lng,
       };
 
+      // Highlight selected truck
+      const isSelected = selectedTruckId === truck.id;
+
       // Create custom marker with truck icon
       const marker = new google.maps.Marker({
         position,
@@ -141,17 +193,31 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
         title: `${truck.plateNumber} - ${truck.status}`,
         icon: {
           url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(
-            createTruckSVG(truck)
+            createTruckSVG(truck, isSelected)
           )}`,
-          scaledSize: new google.maps.Size(50, 50),
-          anchor: new google.maps.Point(25, 25),
+          scaledSize: new google.maps.Size(
+            isSelected ? 60 : 50,
+            isSelected ? 60 : 50
+          ),
+          anchor: new google.maps.Point(
+            isSelected ? 30 : 25,
+            isSelected ? 30 : 25
+          ),
         },
         animation:
           truck.status === "moving" ? google.maps.Animation.BOUNCE : undefined,
+        zIndex: isSelected ? 1000 : 1,
       });
 
       // Add click listener
-      marker.addListener("click", () => {
+      marker.addListener("click", (e: any) => {
+        e.stop(); // Prevent map click event
+
+        // Clear previous routes
+        clearAllRoutes();
+
+        // Set selected truck
+        setSelectedTruckId(truck.id);
         selectTruck(truck.id);
 
         // Create info window
@@ -161,7 +227,7 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
 
         infoWindow.open(map, marker);
 
-        // Show route if truck is selected
+        // Show route for selected truck only
         showTruckRoute(truck, map);
       });
 
@@ -174,11 +240,12 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
     statusFilter,
     companyFilter,
     showOnlyWithAlerts,
+    selectedTruckId,
     selectTruck,
   ]);
 
   // Create enhanced SVG icon for truck with better design
-  const createTruckSVG = (truck: Truck) => {
+  const createTruckSVG = (truck: Truck, isSelected: boolean = false) => {
     const colors = {
       moving: "#4CAF50",
       stopped: "#FF9800",
@@ -198,6 +265,17 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
             <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.3)"/>
           </filter>
         </defs>
+
+        ${
+          isSelected
+            ? `
+          <circle cx="25" cy="25" r="24" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.8">
+            <animate attributeName="r" values="20;28;20" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        `
+            : ""
+        }
 
         <g transform="rotate(${rotation} 25 25)" filter="url(#shadow)">
           <!-- Truck shadow/base -->
@@ -413,6 +491,14 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
   const getUniqueCompanies = () => {
     const companies = [...new Set(trucks.map((truck) => truck.company))];
     return companies;
+  };
+
+  // Clear all routes function
+  const clearAllRoutes = () => {
+    polylinesRef.current.forEach((polylines) => {
+      polylines.forEach((polyline) => polyline.setMap(null));
+    });
+    polylinesRef.current.clear();
   };
 
   // Get filtered trucks for display count
@@ -633,7 +719,7 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
         </div>
 
         {/* Routes Toggle */}
-        <div>
+        <div style={{ marginBottom: "12px" }}>
           <label
             style={{
               display: "flex",
@@ -650,6 +736,28 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
             />
             <span style={{ fontSize: "13px", color: "#1976d2" }}>
               🛣️ Show all routes
+            </span>
+          </label>
+        </div>
+
+        {/* Simulation Control */}
+        <div>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              cursor: "pointer",
+            }}
+          >
+            <input
+              type="checkbox"
+              checked={simulationActive}
+              onChange={(e) => setSimulationActive(e.target.checked)}
+              style={{ transform: "scale(1.2)" }}
+            />
+            <span style={{ fontSize: "13px", color: "#4CAF50" }}>
+              🎬 Live simulation {simulationActive ? "(Active)" : "(Paused)"}
             </span>
           </label>
         </div>
@@ -676,23 +784,24 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
         <div
           style={{ fontWeight: "bold", marginBottom: "10px", color: "#2E7D32" }}
         >
-          📖 Google Maps Instructions:
+          📖 Interactive Instructions:
         </div>
         <div style={{ marginBottom: "6px" }}>
-          • Click on any truck to see route and details
+          • Click truck: show route & details
         </div>
+        <div style={{ marginBottom: "6px" }}>• Click map: clear all routes</div>
         <div style={{ marginBottom: "6px" }}>• Green line: completed route</div>
         <div style={{ marginBottom: "6px" }}>
-          • Orange line: remaining route
+          • Orange dashed: remaining route
         </div>
         <div style={{ marginBottom: "6px" }}>
-          • Use filters to show/hide trucks by status
+          • 🎬 Live simulation: trucks move automatically
         </div>
         <div style={{ marginBottom: "6px" }}>
-          • Truck icons show direction and status
+          • Truck icons rotate with direction
         </div>
         <div style={{ fontSize: "12px", color: "#666", marginTop: "8px" }}>
-          Real Google Maps with Saudi Arabia locations
+          Real-time Google Maps with Saudi Arabia
         </div>
       </div>
     </div>
