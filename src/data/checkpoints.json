@@ -1,0 +1,242 @@
+[
+  {
+    "id": "cp-001",
+    "name": "الرياض - نقطة تفتيش الملك فهد",
+    "type": "security",
+    "location": {
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["document_check", "vehicle_inspection", "cargo_inspection"],
+    "averageWaitTime": 15,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966112345678",
+      "radio": "RIYADH-CP-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-002",
+    "name": "جدة - نقطة تفتيش الميناء",
+    "type": "customs",
+    "location": {
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "authority": "customs",
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["customs_clearance", "cargo_inspection", "document_check"],
+    "averageWaitTime": 45,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966122345678",
+      "radio": "JEDDAH-PORT-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-003",
+    "name": "الدمام - نقطة تفتيش الميناء",
+    "type": "customs",
+    "location": {
+      "lat": 26.3927,
+      "lng": 49.9777
+    },
+    "authority": "customs",
+    "operatingHours": {
+      "open": "05:00",
+      "close": "23:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["customs_clearance", "cargo_inspection", "document_check", "weigh_station"],
+    "averageWaitTime": 30,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966132345678",
+      "radio": "DAMMAM-PORT-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-004",
+    "name": "الخفجي - نقطة تفتيش الحدود",
+    "type": "border_control",
+    "location": {
+      "lat": 28.4292,
+      "lng": 48.4919
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["border_control", "passport_check", "cargo_inspection", "customs_clearance"],
+    "averageWaitTime": 60,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966142345678",
+      "radio": "KHAFJI-BORDER-001",
+      "emergency": "999"
+    },
+    "alertLevel": "elevated"
+  },
+  {
+    "id": "cp-005",
+    "name": "حفر الباطن - نقطة تفتيش أمنية",
+    "type": "security",
+    "location": {
+      "lat": 28.4327,
+      "lng": 45.9700
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["security_check", "document_check", "vehicle_inspection"],
+    "averageWaitTime": 20,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966152345678",
+      "radio": "HAFR-SEC-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-006",
+    "name": "الطائف - نقطة تفتيش الجبال",
+    "type": "security",
+    "location": {
+      "lat": 21.4858,
+      "lng": 40.4114
+    },
+    "authority": "traffic_police",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["traffic_control", "vehicle_inspection", "weight_check"],
+    "averageWaitTime": 10,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966162345678",
+      "radio": "TAIF-TRAFFIC-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-007",
+    "name": "أبها - نقطة تفتيش الجنوب",
+    "type": "security",
+    "location": {
+      "lat": 18.2164,
+      "lng": 42.5053
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["security_check", "document_check", "cargo_inspection"],
+    "averageWaitTime": 25,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966172345678",
+      "radio": "ABHA-SEC-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-008",
+    "name": "ينبع - نقطة تفتيش الميناء الصناعي",
+    "type": "customs",
+    "location": {
+      "lat": 24.0895,
+      "lng": 38.0616
+    },
+    "authority": "customs",
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["customs_clearance", "industrial_cargo_check", "hazmat_inspection"],
+    "averageWaitTime": 40,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966182345678",
+      "radio": "YANBU-PORT-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-009",
+    "name": "الجبيل - نقطة تفتيش الصناعية",
+    "type": "inspection",
+    "location": {
+      "lat": 27.0174,
+      "lng": 49.6520
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["industrial_inspection", "hazmat_check", "environmental_check"],
+    "averageWaitTime": 35,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966192345678",
+      "radio": "JUBAIL-IND-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal"
+  },
+  {
+    "id": "cp-010",
+    "name": "رأس تنورة - نقطة تفتيش المصفاة",
+    "type": "inspection",
+    "location": {
+      "lat": 26.6910,
+      "lng": 50.1697
+    },
+    "authority": "ministry_interior",
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "services": ["refinery_security", "hazmat_inspection", "cargo_verification"],
+    "averageWaitTime": 20,
+    "isActive": true,
+    "contactInfo": {
+      "phone": "+966202345678",
+      "radio": "RASTANURA-REF-001",
+      "emergency": "999"
+    },
+    "alertLevel": "high"
+  }
+]

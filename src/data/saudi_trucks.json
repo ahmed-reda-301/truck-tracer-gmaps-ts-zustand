@@ -1,0 +1,161 @@
+[
+  {
+    "id": "truck-001",
+    "plateNumber": "ر ق ب 1234",
+    "driverName": "Ahmed Al-Rashid",
+    "company": "Saudi Transport Co.",
+    "status": "moving",
+    "speed": 85,
+    "currentPosition": {
+      "lat": 24.2,
+      "lng": 45.8
+    },
+    "origin": {
+      "name": "Riyadh",
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "destination": {
+      "name": "Jeddah",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "alerts": [
+      {
+        "type": "speed",
+        "severity": "warning",
+        "message": "Speed limit exceeded on Highway 40",
+        "timestamp": "2024-01-15T10:30:00Z"
+      }
+    ]
+  },
+  {
+    "id": "truck-002",
+    "plateNumber": "ج د هـ 5678",
+    "driverName": "Mohammed Al-Otaibi",
+    "company": "Gulf Logistics",
+    "status": "moving",
+    "speed": 75,
+    "currentPosition": {
+      "lat": 26.3,
+      "lng": 50.1
+    },
+    "origin": {
+      "name": "Dammam",
+      "lat": 26.4207,
+      "lng": 50.0888
+    },
+    "destination": {
+      "name": "Riyadh",
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "alerts": []
+  },
+  {
+    "id": "truck-003",
+    "plateNumber": "س ع و 9012",
+    "driverName": "Khalid Al-Harbi",
+    "company": "Red Sea Transport",
+    "status": "stopped",
+    "speed": 0,
+    "currentPosition": {
+      "lat": 21.5,
+      "lng": 39.2
+    },
+    "origin": {
+      "name": "Jeddah",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "destination": {
+      "name": "Mecca",
+      "lat": 21.3891,
+      "lng": 39.8579
+    },
+    "alerts": [
+      {
+        "type": "stop",
+        "severity": "info",
+        "message": "Scheduled rest stop",
+        "timestamp": "2024-01-15T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "truck-004",
+    "plateNumber": "ط ي ك 3456",
+    "driverName": "Fahad Al-Mutairi",
+    "company": "Northern Express",
+    "status": "moving",
+    "speed": 90,
+    "currentPosition": {
+      "lat": 28.5,
+      "lng": 46.2
+    },
+    "origin": {
+      "name": "Tabuk",
+      "lat": 28.3998,
+      "lng": 36.5700
+    },
+    "destination": {
+      "name": "Riyadh",
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "alerts": []
+  },
+  {
+    "id": "truck-005",
+    "plateNumber": "ن ص ر 7890",
+    "driverName": "Omar Al-Zahrani",
+    "company": "Southern Cargo",
+    "status": "completed",
+    "speed": 0,
+    "currentPosition": {
+      "lat": 18.2465,
+      "lng": 42.6026
+    },
+    "origin": {
+      "name": "Abha",
+      "lat": 18.2465,
+      "lng": 42.6026
+    },
+    "destination": {
+      "name": "Jazan",
+      "lat": 16.9004,
+      "lng": 42.5531
+    },
+    "alerts": []
+  },
+  {
+    "id": "truck-006",
+    "plateNumber": "ح ز م 2468",
+    "driverName": "Saad Al-Ghamdi",
+    "company": "Eastern Routes",
+    "status": "delayed",
+    "speed": 45,
+    "currentPosition": {
+      "lat": 25.8,
+      "lng": 49.6
+    },
+    "origin": {
+      "name": "Al-Khobar",
+      "lat": 26.2172,
+      "lng": 50.1971
+    },
+    "destination": {
+      "name": "Hafr Al-Batin",
+      "lat": 28.4327,
+      "lng": 45.9700
+    },
+    "alerts": [
+      {
+        "type": "delay",
+        "severity": "warning",
+        "message": "Traffic congestion on Highway 95",
+        "timestamp": "2024-01-15T12:15:00Z"
+      }
+    ]
+  }
+]

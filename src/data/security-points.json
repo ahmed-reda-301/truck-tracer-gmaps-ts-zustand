@@ -1,0 +1,290 @@
+[
+  {
+    "id": "sec-001",
+    "name": "مركز شرطة الرياض المركزي",
+    "type": "police_station",
+    "location": {
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الرياض الوسط",
+    "contactInfo": {
+      "phone": "+966112345001",
+      "radio": "RIYADH-CENTRAL-001",
+      "emergency": "999"
+    },
+    "alertLevel": "normal",
+    "isActive": true,
+    "services": ["traffic_control", "emergency_response", "criminal_investigation"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-002",
+    "name": "نقطة أمنية طريق الرياض - الدمام",
+    "type": "checkpoint",
+    "location": {
+      "lat": 25.2048,
+      "lng": 47.9774
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "المنطقة الشرقية",
+    "contactInfo": {
+      "phone": "+966112345002",
+      "radio": "RIYADH-DAMMAM-002",
+      "emergency": "999"
+    },
+    "alertLevel": "normal",
+    "isActive": true,
+    "services": ["vehicle_inspection", "document_check", "traffic_monitoring"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-003",
+    "name": "مركز شرطة جدة الميناء",
+    "type": "police_station",
+    "location": {
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "جدة الميناء",
+    "contactInfo": {
+      "phone": "+966122345003",
+      "radio": "JEDDAH-PORT-003",
+      "emergency": "999"
+    },
+    "alertLevel": "elevated",
+    "isActive": true,
+    "services": ["port_security", "customs_support", "cargo_monitoring"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-004",
+    "name": "نقطة حرس الحدود - الخفجي",
+    "type": "border_control",
+    "location": {
+      "lat": 28.4292,
+      "lng": 48.4919
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الحدود الشمالية",
+    "contactInfo": {
+      "phone": "+966142345004",
+      "radio": "KHAFJI-BORDER-004",
+      "emergency": "999"
+    },
+    "alertLevel": "high",
+    "isActive": true,
+    "services": ["border_control", "smuggling_prevention", "international_monitoring"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-005",
+    "name": "مركز شرطة الدمام الصناعية",
+    "type": "police_station",
+    "location": {
+      "lat": 26.3927,
+      "lng": 49.9777
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الدمام الصناعية",
+    "contactInfo": {
+      "phone": "+966132345005",
+      "radio": "DAMMAM-IND-005",
+      "emergency": "999"
+    },
+    "alertLevel": "normal",
+    "isActive": true,
+    "services": ["industrial_security", "hazmat_response", "port_monitoring"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-006",
+    "name": "نقطة أمنية طريق مكة - المدينة",
+    "type": "checkpoint",
+    "location": {
+      "lat": 22.7500,
+      "lng": 39.5000
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "المنطقة الغربية",
+    "contactInfo": {
+      "phone": "+966122345006",
+      "radio": "MAKKAH-MADINAH-006",
+      "emergency": "999"
+    },
+    "alertLevel": "elevated",
+    "isActive": true,
+    "services": ["pilgrimage_security", "traffic_control", "emergency_response"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-007",
+    "name": "مركز شرطة أبها الجنوبي",
+    "type": "police_station",
+    "location": {
+      "lat": 18.2164,
+      "lng": 42.5053
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "عسير الجنوبية",
+    "contactInfo": {
+      "phone": "+966172345007",
+      "radio": "ABHA-SOUTH-007",
+      "emergency": "999"
+    },
+    "alertLevel": "normal",
+    "isActive": true,
+    "services": ["mountain_patrol", "border_monitoring", "tourist_security"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-008",
+    "name": "نقطة حرس الحدود - جازان",
+    "type": "border_control",
+    "location": {
+      "lat": 16.9016,
+      "lng": 42.5511
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الحدود الجنوبية",
+    "contactInfo": {
+      "phone": "+966173345008",
+      "radio": "JAZAN-BORDER-008",
+      "emergency": "999"
+    },
+    "alertLevel": "high",
+    "isActive": true,
+    "services": ["border_control", "maritime_security", "smuggling_prevention"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-009",
+    "name": "مركز شرطة ينبع الصناعية",
+    "type": "police_station",
+    "location": {
+      "lat": 24.0895,
+      "lng": 38.0616
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "ينبع الصناعية",
+    "contactInfo": {
+      "phone": "+966143345009",
+      "radio": "YANBU-IND-009",
+      "emergency": "999"
+    },
+    "alertLevel": "elevated",
+    "isActive": true,
+    "services": ["industrial_security", "port_security", "petrochemical_monitoring"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-010",
+    "name": "نقطة أمنية الجبيل الصناعية",
+    "type": "checkpoint",
+    "location": {
+      "lat": 27.0174,
+      "lng": 49.6520
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الجبيل الصناعية",
+    "contactInfo": {
+      "phone": "+966133345010",
+      "radio": "JUBAIL-IND-010",
+      "emergency": "999"
+    },
+    "alertLevel": "high",
+    "isActive": true,
+    "services": ["industrial_checkpoint", "hazmat_monitoring", "facility_security"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-011",
+    "name": "مركز شرطة الطائف الجبلي",
+    "type": "police_station",
+    "location": {
+      "lat": 21.4858,
+      "lng": 40.4114
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "الطائف الجبلية",
+    "contactInfo": {
+      "phone": "+966122345011",
+      "radio": "TAIF-MOUNTAIN-011",
+      "emergency": "999"
+    },
+    "alertLevel": "normal",
+    "isActive": true,
+    "services": ["mountain_patrol", "weather_monitoring", "tourist_security"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  {
+    "id": "sec-012",
+    "name": "نقطة أمنية رأس تنورة",
+    "type": "checkpoint",
+    "location": {
+      "lat": 26.6910,
+      "lng": 50.1697
+    },
+    "authority": "ministry_interior",
+    "jurisdiction": "رأس تنورة الصناعية",
+    "contactInfo": {
+      "phone": "+966133345012",
+      "radio": "RASTANURA-012",
+      "emergency": "999"
+    },
+    "alertLevel": "critical",
+    "isActive": true,
+    "services": ["refinery_security", "critical_infrastructure", "hazmat_response"],
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    }
+  }
+]

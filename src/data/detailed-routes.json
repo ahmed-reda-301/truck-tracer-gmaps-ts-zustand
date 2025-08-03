@@ -1,0 +1,321 @@
+[
+  {
+    "id": "route-001",
+    "name": "الرياض - جدة السريع",
+    "description": "الطريق السريع الرئيسي بين الرياض وجدة عبر الطائف",
+    "distance": 950,
+    "estimatedTime": "9h 30m",
+    "waypoints": [
+      {
+        "id": "wp-001-01",
+        "name": "الرياض - نقطة البداية",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-001-02",
+        "name": "الخرج",
+        "lat": 24.1327,
+        "lng": 47.3340,
+        "type": "transit",
+        "estimatedTime": "1h 0m"
+      },
+      {
+        "id": "wp-001-03",
+        "name": "الدلم",
+        "lat": 23.9939,
+        "lng": 46.7208,
+        "type": "transit",
+        "estimatedTime": "1h 30m"
+      },
+      {
+        "id": "wp-001-04",
+        "name": "الأفلاج",
+        "lat": 22.0906,
+        "lng": 46.6697,
+        "type": "checkpoint",
+        "estimatedTime": "3h 0m"
+      },
+      {
+        "id": "wp-001-05",
+        "name": "وادي الدواسر",
+        "lat": 20.5058,
+        "lng": 44.7267,
+        "type": "rest_stop",
+        "estimatedTime": "5h 0m"
+      },
+      {
+        "id": "wp-001-06",
+        "name": "بيشة",
+        "lat": 20.0127,
+        "lng": 42.6089,
+        "type": "transit",
+        "estimatedTime": "7h 0m"
+      },
+      {
+        "id": "wp-001-07",
+        "name": "الطائف",
+        "lat": 21.4858,
+        "lng": 40.4114,
+        "type": "checkpoint",
+        "estimatedTime": "8h 30m"
+      },
+      {
+        "id": "wp-001-08",
+        "name": "جدة - نقطة الوصول",
+        "lat": 21.4858,
+        "lng": 39.1925,
+        "type": "destination",
+        "estimatedTime": "9h 30m"
+      }
+    ],
+    "pathCoordinates": [
+      { "lat": 24.7136, "lng": 46.6753 },
+      { "lat": 24.5000, "lng": 46.8000 },
+      { "lat": 24.1327, "lng": 47.3340 },
+      { "lat": 23.9939, "lng": 46.7208 },
+      { "lat": 23.5000, "lng": 46.5000 },
+      { "lat": 22.5000, "lng": 46.0000 },
+      { "lat": 22.0906, "lng": 46.6697 },
+      { "lat": 21.5000, "lng": 45.5000 },
+      { "lat": 20.5058, "lng": 44.7267 },
+      { "lat": 20.2000, "lng": 43.5000 },
+      { "lat": 20.0127, "lng": 42.6089 },
+      { "lat": 20.5000, "lng": 41.5000 },
+      { "lat": 21.4858, "lng": 40.4114 },
+      { "lat": 21.4858, "lng": 39.8000 },
+      { "lat": 21.4858, "lng": 39.1925 }
+    ],
+    "restrictions": {
+      "maxSpeed": 120,
+      "dangerousGoods": true,
+      "nightDriving": true,
+      "weatherRestrictions": ["heavy_rain", "sandstorm"],
+      "requiresPermit": false,
+      "refrigerated": false
+    },
+    "checkpoints": ["cp-001", "cp-006"]
+  },
+  {
+    "id": "route-002",
+    "name": "الرياض - الدمام الساحلي",
+    "description": "طريق الرياض - الدمام عبر الأحساء",
+    "distance": 395,
+    "estimatedTime": "4h 0m",
+    "waypoints": [
+      {
+        "id": "wp-002-01",
+        "name": "الرياض - نقطة البداية",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-002-02",
+        "name": "الخرج",
+        "lat": 24.1327,
+        "lng": 47.3340,
+        "type": "transit",
+        "estimatedTime": "1h 0m"
+      },
+      {
+        "id": "wp-002-03",
+        "name": "حوطة بني تميم",
+        "lat": 23.5058,
+        "lng": 46.8500,
+        "type": "transit",
+        "estimatedTime": "1h 30m"
+      },
+      {
+        "id": "wp-002-04",
+        "name": "الأحساء",
+        "lat": 25.4295,
+        "lng": 49.5906,
+        "type": "checkpoint",
+        "estimatedTime": "2h 30m"
+      },
+      {
+        "id": "wp-002-05",
+        "name": "الدمام - نقطة الوصول",
+        "lat": 26.3927,
+        "lng": 49.9777,
+        "type": "destination",
+        "estimatedTime": "4h 0m"
+      }
+    ],
+    "pathCoordinates": [
+      { "lat": 24.7136, "lng": 46.6753 },
+      { "lat": 24.5000, "lng": 47.0000 },
+      { "lat": 24.1327, "lng": 47.3340 },
+      { "lat": 23.8000, "lng": 47.5000 },
+      { "lat": 23.5058, "lng": 46.8500 },
+      { "lat": 24.0000, "lng": 48.0000 },
+      { "lat": 24.5000, "lng": 48.5000 },
+      { "lat": 25.4295, "lng": 49.5906 },
+      { "lat": 25.8000, "lng": 49.7000 },
+      { "lat": 26.3927, "lng": 49.9777 }
+    ],
+    "restrictions": {
+      "maxSpeed": 120,
+      "dangerousGoods": true,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm"],
+      "requiresPermit": false,
+      "refrigerated": true
+    },
+    "checkpoints": ["cp-001", "cp-003"]
+  },
+  {
+    "id": "route-003",
+    "name": "جدة - الدمام الشمالي",
+    "description": "الطريق الشمالي بين جدة والدمام عبر بريدة",
+    "distance": 1200,
+    "estimatedTime": "12h 0m",
+    "waypoints": [
+      {
+        "id": "wp-003-01",
+        "name": "جدة - نقطة البداية",
+        "lat": 21.4858,
+        "lng": 39.1925,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-003-02",
+        "name": "المدينة المنورة",
+        "lat": 24.5247,
+        "lng": 39.5692,
+        "type": "checkpoint",
+        "estimatedTime": "3h 0m"
+      },
+      {
+        "id": "wp-003-03",
+        "name": "القصيم - بريدة",
+        "lat": 26.3260,
+        "lng": 43.9750,
+        "type": "rest_stop",
+        "estimatedTime": "6h 0m"
+      },
+      {
+        "id": "wp-003-04",
+        "name": "حفر الباطن",
+        "lat": 28.4327,
+        "lng": 45.9700,
+        "type": "checkpoint",
+        "estimatedTime": "9h 0m"
+      },
+      {
+        "id": "wp-003-05",
+        "name": "الدمام - نقطة الوصول",
+        "lat": 26.3927,
+        "lng": 49.9777,
+        "type": "destination",
+        "estimatedTime": "12h 0m"
+      }
+    ],
+    "pathCoordinates": [
+      { "lat": 21.4858, "lng": 39.1925 },
+      { "lat": 22.0000, "lng": 39.3000 },
+      { "lat": 23.0000, "lng": 39.4000 },
+      { "lat": 24.5247, "lng": 39.5692 },
+      { "lat": 25.0000, "lng": 40.0000 },
+      { "lat": 25.5000, "lng": 41.0000 },
+      { "lat": 26.0000, "lng": 42.0000 },
+      { "lat": 26.3260, "lng": 43.9750 },
+      { "lat": 27.0000, "lng": 44.5000 },
+      { "lat": 28.4327, "lng": 45.9700 },
+      { "lat": 28.0000, "lng": 47.0000 },
+      { "lat": 27.0000, "lng": 48.5000 },
+      { "lat": 26.3927, "lng": 49.9777 }
+    ],
+    "restrictions": {
+      "maxSpeed": 110,
+      "dangerousGoods": false,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm", "heavy_rain"],
+      "requiresPermit": true,
+      "refrigerated": false
+    },
+    "checkpoints": ["cp-002", "cp-005"]
+  },
+  {
+    "id": "route-004",
+    "name": "الرياض - أبها الجنوبي",
+    "description": "طريق الرياض - أبها عبر الخرج ووادي الدواسر",
+    "distance": 850,
+    "estimatedTime": "8h 30m",
+    "waypoints": [
+      {
+        "id": "wp-004-01",
+        "name": "الرياض - نقطة البداية",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-004-02",
+        "name": "الخرج",
+        "lat": 24.1327,
+        "lng": 47.3340,
+        "type": "transit",
+        "estimatedTime": "1h 0m"
+      },
+      {
+        "id": "wp-004-03",
+        "name": "الأفلاج",
+        "lat": 22.0906,
+        "lng": 46.6697,
+        "type": "checkpoint",
+        "estimatedTime": "3h 0m"
+      },
+      {
+        "id": "wp-004-04",
+        "name": "وادي الدواسر",
+        "lat": 20.5058,
+        "lng": 44.7267,
+        "type": "rest_stop",
+        "estimatedTime": "5h 0m"
+      },
+      {
+        "id": "wp-004-05",
+        "name": "بيشة",
+        "lat": 20.0127,
+        "lng": 42.6089,
+        "type": "transit",
+        "estimatedTime": "6h 30m"
+      },
+      {
+        "id": "wp-004-06",
+        "name": "أبها - نقطة الوصول",
+        "lat": 18.2164,
+        "lng": 42.5053,
+        "type": "destination",
+        "estimatedTime": "8h 30m"
+      }
+    ],
+    "pathCoordinates": [
+      { "lat": 24.7136, "lng": 46.6753 },
+      { "lat": 24.1327, "lng": 47.3340 },
+      { "lat": 23.5000, "lng": 46.8000 },
+      { "lat": 22.0906, "lng": 46.6697 },
+      { "lat": 21.0000, "lng": 45.5000 },
+      { "lat": 20.5058, "lng": 44.7267 },
+      { "lat": 20.0127, "lng": 42.6089 },
+      { "lat": 19.0000, "lng": 42.5500 },
+      { "lat": 18.2164, "lng": 42.5053 }
+    ],
+    "restrictions": {
+      "maxSpeed": 100,
+      "dangerousGoods": true,
+      "nightDriving": false,
+      "weatherRestrictions": ["heavy_rain", "fog"],
+      "requiresPermit": false,
+      "refrigerated": true
+    },
+    "checkpoints": ["cp-001", "cp-007"]
+  }
+]

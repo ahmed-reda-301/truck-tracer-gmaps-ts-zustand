@@ -1,0 +1,332 @@
+[
+  {
+    "id": "route-001",
+    "name": "Riyadh to Jeddah Highway",
+    "description": "Main highway connecting Riyadh to Jeddah via Taif",
+    "distance": 950,
+    "estimatedTime": "9h 30m",
+    "waypoints": [
+      {
+        "id": "wp-001-01",
+        "name": "Riyadh Industrial City",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-001-02",
+        "name": "Al-Dawadmi Checkpoint",
+        "lat": 24.5077,
+        "lng": 44.3929,
+        "type": "checkpoint",
+        "estimatedTime": "2h 15m"
+      },
+      {
+        "id": "wp-001-03",
+        "name": "Al-Quwayiyah Rest Stop",
+        "lat": 24.0618,
+        "lng": 43.2324,
+        "type": "rest_stop",
+        "estimatedTime": "3h 45m"
+      },
+      {
+        "id": "wp-001-04",
+        "name": "Taif Mountain Pass",
+        "lat": 21.4858,
+        "lng": 40.4114,
+        "type": "checkpoint",
+        "estimatedTime": "7h 0m"
+      },
+      {
+        "id": "wp-001-05",
+        "name": "Jeddah Port",
+        "lat": 21.4858,
+        "lng": 39.1925,
+        "type": "destination",
+        "estimatedTime": "9h 30m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 120,
+      "dangerousGoods": true,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm", "heavy_rain"]
+    },
+    "checkpoints": ["cp-001", "cp-002", "cp-003"]
+  },
+  {
+    "id": "route-002",
+    "name": "Jeddah to Dammam Coastal Route",
+    "description": "Eastern coastal route through major cities",
+    "distance": 1240,
+    "estimatedTime": "12h 0m",
+    "waypoints": [
+      {
+        "id": "wp-002-01",
+        "name": "Jeddah Port",
+        "lat": 21.4858,
+        "lng": 39.1925,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-002-02",
+        "name": "Mecca Bypass",
+        "lat": 21.3891,
+        "lng": 39.8579,
+        "type": "checkpoint",
+        "estimatedTime": "1h 30m"
+      },
+      {
+        "id": "wp-002-03",
+        "name": "Riyadh Central Hub",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "type": "hub",
+        "estimatedTime": "6h 0m"
+      },
+      {
+        "id": "wp-002-04",
+        "name": "Al-Khobar Industrial",
+        "lat": 26.2172,
+        "lng": 50.1971,
+        "type": "checkpoint",
+        "estimatedTime": "10h 30m"
+      },
+      {
+        "id": "wp-002-05",
+        "name": "Dammam Port",
+        "lat": 26.3927,
+        "lng": 49.9777,
+        "type": "destination",
+        "estimatedTime": "12h 0m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 110,
+      "dangerousGoods": true,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm"]
+    },
+    "checkpoints": ["cp-004", "cp-005", "cp-006", "cp-007"]
+  },
+  {
+    "id": "route-003",
+    "name": "Ras Tanura to UAE Border",
+    "description": "International route to UAE via Eastern Province",
+    "distance": 680,
+    "estimatedTime": "7h 15m",
+    "waypoints": [
+      {
+        "id": "wp-003-01",
+        "name": "Ras Tanura Refinery",
+        "lat": 26.6910,
+        "lng": 50.1697,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-003-02",
+        "name": "Jubail Industrial City",
+        "lat": 27.0174,
+        "lng": 49.6520,
+        "type": "checkpoint",
+        "estimatedTime": "1h 0m"
+      },
+      {
+        "id": "wp-003-03",
+        "name": "Al-Khafji Border",
+        "lat": 28.4292,
+        "lng": 48.4919,
+        "type": "border",
+        "estimatedTime": "3h 30m"
+      },
+      {
+        "id": "wp-003-04",
+        "name": "Kuwait Transit",
+        "lat": 29.3759,
+        "lng": 47.9774,
+        "type": "transit",
+        "estimatedTime": "5h 0m"
+      },
+      {
+        "id": "wp-003-05",
+        "name": "Abu Dhabi Refinery",
+        "lat": 24.4539,
+        "lng": 54.3773,
+        "type": "destination",
+        "estimatedTime": "7h 15m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 100,
+      "dangerousGoods": true,
+      "nightDriving": false,
+      "weatherRestrictions": ["sandstorm", "fog"],
+      "requiresPermit": true
+    },
+    "checkpoints": ["cp-008", "cp-009", "cp-010"]
+  },
+  {
+    "id": "route-004",
+    "name": "Al-Khobar to Kuwait Express",
+    "description": "Fast route to Kuwait for time-sensitive cargo",
+    "distance": 520,
+    "estimatedTime": "5h 30m",
+    "waypoints": [
+      {
+        "id": "wp-004-01",
+        "name": "Al-Khobar Cold Storage",
+        "lat": 26.2172,
+        "lng": 50.1971,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-004-02",
+        "name": "Dammam Checkpoint",
+        "lat": 26.3927,
+        "lng": 49.9777,
+        "type": "checkpoint",
+        "estimatedTime": "0h 30m"
+      },
+      {
+        "id": "wp-004-03",
+        "name": "Hafr Al-Batin Junction",
+        "lat": 28.4327,
+        "lng": 45.9700,
+        "type": "junction",
+        "estimatedTime": "2h 45m"
+      },
+      {
+        "id": "wp-004-04",
+        "name": "Kuwait Border",
+        "lat": 29.0469,
+        "lng": 46.5527,
+        "type": "border",
+        "estimatedTime": "4h 30m"
+      },
+      {
+        "id": "wp-004-05",
+        "name": "Kuwait City Market",
+        "lat": 29.3759,
+        "lng": 47.9774,
+        "type": "destination",
+        "estimatedTime": "5h 30m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 120,
+      "dangerousGoods": false,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm"],
+      "refrigerated": true
+    },
+    "checkpoints": ["cp-011", "cp-012"]
+  },
+  {
+    "id": "route-005",
+    "name": "Jazan to Yanbu Red Sea Route",
+    "description": "Coastal route along the Red Sea",
+    "distance": 890,
+    "estimatedTime": "10h 15m",
+    "waypoints": [
+      {
+        "id": "wp-005-01",
+        "name": "Jazan Economic City",
+        "lat": 16.9016,
+        "lng": 42.5511,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-005-02",
+        "name": "Abha Mountain Pass",
+        "lat": 18.2164,
+        "lng": 42.5053,
+        "type": "checkpoint",
+        "estimatedTime": "2h 30m"
+      },
+      {
+        "id": "wp-005-03",
+        "name": "Al-Baha Rest Area",
+        "lat": 20.0129,
+        "lng": 41.4677,
+        "type": "rest_stop",
+        "estimatedTime": "5h 0m"
+      },
+      {
+        "id": "wp-005-04",
+        "name": "Medina Bypass",
+        "lat": 24.5247,
+        "lng": 39.5692,
+        "type": "checkpoint",
+        "estimatedTime": "8h 0m"
+      },
+      {
+        "id": "wp-005-05",
+        "name": "Yanbu Industrial Port",
+        "lat": 24.0895,
+        "lng": 38.0616,
+        "type": "destination",
+        "estimatedTime": "10h 15m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 100,
+      "dangerousGoods": true,
+      "nightDriving": true,
+      "weatherRestrictions": ["sandstorm", "flash_flood"]
+    },
+    "checkpoints": ["cp-013", "cp-014", "cp-015"]
+  },
+  {
+    "id": "route-006",
+    "name": "Al-Ain to Dubai Express",
+    "description": "Short UAE internal route",
+    "distance": 160,
+    "estimatedTime": "2h 0m",
+    "waypoints": [
+      {
+        "id": "wp-006-01",
+        "name": "Al-Ain Distribution Center",
+        "lat": 24.2075,
+        "lng": 55.7447,
+        "type": "origin",
+        "estimatedTime": "0h 0m"
+      },
+      {
+        "id": "wp-006-02",
+        "name": "Abu Dhabi Transit",
+        "lat": 24.4539,
+        "lng": 54.3773,
+        "type": "transit",
+        "estimatedTime": "0h 45m"
+      },
+      {
+        "id": "wp-006-03",
+        "name": "Sharjah Junction",
+        "lat": 25.3463,
+        "lng": 55.4209,
+        "type": "junction",
+        "estimatedTime": "1h 30m"
+      },
+      {
+        "id": "wp-006-04",
+        "name": "Dubai Logistics Hub",
+        "lat": 25.2048,
+        "lng": 55.2708,
+        "type": "destination",
+        "estimatedTime": "2h 0m"
+      }
+    ],
+    "restrictions": {
+      "maxSpeed": 140,
+      "dangerousGoods": false,
+      "nightDriving": true,
+      "weatherRestrictions": []
+    },
+    "checkpoints": ["cp-016"]
+  }
+]

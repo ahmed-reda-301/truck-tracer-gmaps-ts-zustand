@@ -1,0 +1,282 @@
+[
+  {
+    "id": "airport-001",
+    "name": "مطار الملك خالد الدولي",
+    "code": "RUH",
+    "location": {
+      "lat": 24.9576,
+      "lng": 46.6988
+    },
+    "type": "international",
+    "runways": 4,
+    "cargoCapacity": "500,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": true,
+      "oversizeLoad": true,
+      "nightOperations": true
+    },
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966114678000",
+      "cargo": "+966114678100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "customs_clearance", "cold_storage", "hazmat_handling"]
+  },
+  {
+    "id": "airport-002",
+    "name": "مطار الملك عبدالعزيز الدولي",
+    "code": "JED",
+    "location": {
+      "lat": 21.6796,
+      "lng": 39.1564
+    },
+    "type": "international",
+    "runways": 4,
+    "cargoCapacity": "400,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": true,
+      "oversizeLoad": true,
+      "nightOperations": true
+    },
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966126781000",
+      "cargo": "+966126781100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "customs_clearance", "cold_storage", "hazmat_handling", "pilgrimage_cargo"]
+  },
+  {
+    "id": "airport-003",
+    "name": "مطار الملك فهد الدولي",
+    "code": "DMM",
+    "location": {
+      "lat": 26.4712,
+      "lng": 49.7979
+    },
+    "type": "international",
+    "runways": 2,
+    "cargoCapacity": "300,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": true,
+      "oversizeLoad": true,
+      "nightOperations": true
+    },
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966138901000",
+      "cargo": "+966138901100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "customs_clearance", "cold_storage", "oil_cargo"]
+  },
+  {
+    "id": "airport-004",
+    "name": "مطار الأمير محمد بن عبدالعزيز",
+    "code": "MED",
+    "location": {
+      "lat": 24.5534,
+      "lng": 39.7050
+    },
+    "type": "domestic",
+    "runways": 2,
+    "cargoCapacity": "100,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": false,
+      "oversizeLoad": false,
+      "nightOperations": true
+    },
+    "operatingHours": {
+      "open": "05:00",
+      "close": "23:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966148123000",
+      "cargo": "+966148123100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "pilgrimage_cargo", "domestic_freight"]
+  },
+  {
+    "id": "airport-005",
+    "name": "مطار الأمير عبدالمحسن بن عبدالعزيز",
+    "code": "YNB",
+    "location": {
+      "lat": 24.1444,
+      "lng": 38.0636
+    },
+    "type": "domestic",
+    "runways": 1,
+    "cargoCapacity": "80,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": true,
+      "oversizeLoad": true,
+      "nightOperations": false
+    },
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966143456000",
+      "cargo": "+966143456100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "industrial_cargo", "petrochemical_cargo"]
+  },
+  {
+    "id": "airport-006",
+    "name": "مطار الملك عبدالله الجديد",
+    "code": "JIZ",
+    "location": {
+      "lat": 16.9016,
+      "lng": 42.5858
+    },
+    "type": "domestic",
+    "runways": 1,
+    "cargoCapacity": "50,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": false,
+      "oversizeLoad": false,
+      "nightOperations": false
+    },
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966173789000",
+      "cargo": "+966173789100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "agricultural_cargo", "domestic_freight"]
+  },
+  {
+    "id": "airport-007",
+    "name": "مطار الملك خالد العسكري",
+    "code": "KMC",
+    "location": {
+      "lat": 18.2970,
+      "lng": 42.6566
+    },
+    "type": "military",
+    "runways": 2,
+    "cargoCapacity": "200,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": true,
+      "oversizeLoad": true,
+      "nightOperations": true
+    },
+    "operatingHours": {
+      "open": "00:00",
+      "close": "23:59",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966172234000",
+      "cargo": "+966172234100",
+      "emergency": "999"
+    },
+    "services": ["military_cargo", "defense_equipment", "emergency_supplies"]
+  },
+  {
+    "id": "airport-008",
+    "name": "مطار الجوف الإقليمي",
+    "code": "AJF",
+    "location": {
+      "lat": 29.7851,
+      "lng": 40.1000
+    },
+    "type": "domestic",
+    "runways": 1,
+    "cargoCapacity": "30,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": false,
+      "oversizeLoad": false,
+      "nightOperations": false
+    },
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966146567000",
+      "cargo": "+966146567100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "agricultural_cargo", "regional_freight"]
+  },
+  {
+    "id": "airport-009",
+    "name": "مطار حائل الإقليمي",
+    "code": "HAS",
+    "location": {
+      "lat": 27.4379,
+      "lng": 41.6863
+    },
+    "type": "domestic",
+    "runways": 1,
+    "cargoCapacity": "25,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": false,
+      "oversizeLoad": false,
+      "nightOperations": false
+    },
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966165678000",
+      "cargo": "+966165678100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "domestic_freight", "regional_cargo"]
+  },
+  {
+    "id": "airport-010",
+    "name": "مطار تبوك الإقليمي",
+    "code": "TUU",
+    "location": {
+      "lat": 28.3654,
+      "lng": 36.6189
+    },
+    "type": "domestic",
+    "runways": 1,
+    "cargoCapacity": "40,000 tons/year",
+    "restrictions": {
+      "dangerousGoods": false,
+      "oversizeLoad": false,
+      "nightOperations": false
+    },
+    "operatingHours": {
+      "open": "06:00",
+      "close": "22:00",
+      "timezone": "Asia/Riyadh"
+    },
+    "contactInfo": {
+      "phone": "+966144789000",
+      "cargo": "+966144789100",
+      "emergency": "999"
+    },
+    "services": ["cargo_handling", "border_cargo", "regional_freight"]
+  }
+]

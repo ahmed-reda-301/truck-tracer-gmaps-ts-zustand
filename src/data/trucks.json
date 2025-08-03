@@ -1,0 +1,277 @@
+[
+  {
+    "id": "truck-001",
+    "plateNumber": "ABC-1234",
+    "driverName": "Ahmed Hassan",
+    "driverPhone": "+966501234567",
+    "company": "Saudi Transport Co.",
+    "truckType": "Heavy Cargo",
+    "capacity": "40 tons",
+    "currentPosition": {
+      "lat": 24.7136,
+      "lng": 46.6753,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Jeddah Port",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "origin": {
+      "name": "Riyadh Industrial City",
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "route": "route-001",
+    "status": "moving",
+    "speed": 85,
+    "heading": 245,
+    "fuel": 75,
+    "battery": 95,
+    "lastUpdate": "2025-01-03T10:30:00Z",
+    "alerts": [
+      {
+        "type": "speed",
+        "message": "Speed limit exceeded",
+        "severity": "warning",
+        "timestamp": "2025-01-03T10:25:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Electronics",
+      "weight": "35 tons",
+      "value": "$500,000",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "truck-002",
+    "plateNumber": "DEF-5678",
+    "driverName": "Mohammed Ali",
+    "driverPhone": "+966502345678",
+    "company": "Gulf Logistics",
+    "truckType": "Container",
+    "capacity": "25 tons",
+    "currentPosition": {
+      "lat": 21.5169,
+      "lng": 39.2192,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Dammam Port",
+      "lat": 26.3927,
+      "lng": 49.9777
+    },
+    "origin": {
+      "name": "Jeddah Port",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "route": "route-002",
+    "status": "stopped",
+    "speed": 0,
+    "heading": 90,
+    "fuel": 45,
+    "battery": 88,
+    "lastUpdate": "2025-01-03T10:15:00Z",
+    "alerts": [
+      {
+        "type": "stop",
+        "message": "Unscheduled stop detected",
+        "severity": "warning",
+        "timestamp": "2025-01-03T10:15:00Z"
+      },
+      {
+        "type": "fuel",
+        "message": "Low fuel level",
+        "severity": "critical",
+        "timestamp": "2025-01-03T09:45:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Food Products",
+      "weight": "20 tons",
+      "value": "$150,000",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "truck-003",
+    "plateNumber": "GHI-9012",
+    "driverName": "Khalid Omar",
+    "driverPhone": "+966503456789",
+    "company": "Desert Express",
+    "truckType": "Tanker",
+    "capacity": "30,000 liters",
+    "currentPosition": {
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Abu Dhabi Refinery",
+      "lat": 24.4539,
+      "lng": 54.3773
+    },
+    "origin": {
+      "name": "Ras Tanura Refinery",
+      "lat": 26.6910,
+      "lng": 50.1697
+    },
+    "route": "route-003",
+    "status": "moving",
+    "speed": 75,
+    "heading": 180,
+    "fuel": 90,
+    "battery": 92,
+    "lastUpdate": "2025-01-03T10:30:00Z",
+    "alerts": [
+      {
+        "type": "lock",
+        "message": "Cargo lock system activated",
+        "severity": "info",
+        "timestamp": "2025-01-03T08:00:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Petroleum Products",
+      "weight": "25,000 liters",
+      "value": "$800,000",
+      "dangerous": true
+    }
+  },
+  {
+    "id": "truck-004",
+    "plateNumber": "JKL-3456",
+    "driverName": "Saad Abdullah",
+    "driverPhone": "+966504567890",
+    "company": "National Freight",
+    "truckType": "Refrigerated",
+    "capacity": "18 tons",
+    "currentPosition": {
+      "lat": 26.4207,
+      "lng": 50.0888,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Kuwait City Market",
+      "lat": 29.3759,
+      "lng": 47.9774
+    },
+    "origin": {
+      "name": "Al-Khobar Cold Storage",
+      "lat": 26.2172,
+      "lng": 50.1971
+    },
+    "route": "route-004",
+    "status": "moving",
+    "speed": 95,
+    "heading": 315,
+    "fuel": 60,
+    "battery": 78,
+    "lastUpdate": "2025-01-03T10:30:00Z",
+    "alerts": [
+      {
+        "type": "speed",
+        "message": "Excessive speed detected",
+        "severity": "critical",
+        "timestamp": "2025-01-03T10:28:00Z"
+      },
+      {
+        "type": "temperature",
+        "message": "Refrigeration temperature rising",
+        "severity": "warning",
+        "timestamp": "2025-01-03T10:20:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Frozen Foods",
+      "weight": "15 tons",
+      "value": "$200,000",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "truck-005",
+    "plateNumber": "MNO-7890",
+    "driverName": "Faisal Ahmed",
+    "driverPhone": "+966505678901",
+    "company": "Red Sea Transport",
+    "truckType": "Flatbed",
+    "capacity": "35 tons",
+    "currentPosition": {
+      "lat": 20.0129,
+      "lng": 41.4977,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Yanbu Industrial Port",
+      "lat": 24.0895,
+      "lng": 38.0616
+    },
+    "origin": {
+      "name": "Jazan Economic City",
+      "lat": 16.9016,
+      "lng": 42.5511
+    },
+    "route": "route-005",
+    "status": "completed",
+    "speed": 0,
+    "heading": 0,
+    "fuel": 85,
+    "battery": 100,
+    "lastUpdate": "2025-01-03T09:45:00Z",
+    "alerts": [],
+    "cargo": {
+      "type": "Construction Materials",
+      "weight": "32 tons",
+      "value": "$300,000",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "truck-006",
+    "plateNumber": "PQR-2468",
+    "driverName": "Omar Hassan",
+    "driverPhone": "+966506789012",
+    "company": "Eastern Express",
+    "truckType": "Box Truck",
+    "capacity": "12 tons",
+    "currentPosition": {
+      "lat": 24.4539,
+      "lng": 54.3773,
+      "timestamp": "2025-01-03T10:30:00Z"
+    },
+    "destination": {
+      "name": "Dubai Logistics Hub",
+      "lat": 25.2048,
+      "lng": 55.2708
+    },
+    "origin": {
+      "name": "Al-Ain Distribution Center",
+      "lat": 24.2075,
+      "lng": 55.7447
+    },
+    "route": "route-006",
+    "status": "moving",
+    "speed": 65,
+    "heading": 45,
+    "fuel": 70,
+    "battery": 85,
+    "lastUpdate": "2025-01-03T10:30:00Z",
+    "alerts": [
+      {
+        "type": "direction",
+        "message": "Route deviation detected",
+        "severity": "warning",
+        "timestamp": "2025-01-03T10:15:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Consumer Goods",
+      "weight": "10 tons",
+      "value": "$120,000",
+      "dangerous": false
+    }
+  }
+]
