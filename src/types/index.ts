@@ -6,6 +6,26 @@ export interface Position {
   timestamp?: string;
 }
 
+export interface EntryPoint {
+  id: string;
+  name: string;
+  nameEn: string;
+  type: "seaport" | "airport" | "border";
+  category: string;
+  location: {
+    lat: number;
+    lng: number;
+  };
+  capacity?: string;
+  services?: string[];
+  operatingHours?: string;
+  authority?: string;
+  isActive: boolean;
+  borderWith?: string;
+  iataCode?: string;
+  icaoCode?: string;
+}
+
 export interface Location {
   name: string;
   lat: number;
@@ -46,8 +66,9 @@ export interface Truck {
   truckType: string;
   capacity: string;
   currentPosition: Position;
-  destination: Location;
-  origin: Location;
+  previousPosition?: Position;
+  destination: Location & { type?: string; id?: string; nameEn?: string };
+  origin: Location & { type?: string; id?: string; nameEn?: string };
   route: string;
   status: "moving" | "stopped" | "completed" | "delayed" | "maintenance";
   speed: number;
@@ -56,7 +77,7 @@ export interface Truck {
   battery: number; // Percentage
   lastUpdate: string;
   alerts: Alert[];
-  cargo: Cargo;
+  cargo: Cargo & { customsStatus?: string };
 }
 
 export interface Waypoint {

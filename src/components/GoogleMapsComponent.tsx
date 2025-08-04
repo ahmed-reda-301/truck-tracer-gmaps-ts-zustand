@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTruckStore } from "../store/truckStore";
-import { Truck } from "../types";
+import { Truck, EntryPoint } from "../types";
+import EntryPointsLayer from "./EntryPointsLayer";
+
+// Import entry points data
+import entryPointsData from "../data/saudi_entry_points.json";
 
 // Google Maps API Key - Add your key here
 const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || "";
@@ -27,8 +31,22 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
   const [showRoutes, setShowRoutes] = useState(false);
   const [showOnlyWithAlerts, setShowOnlyWithAlerts] = useState(false);
   const [companyFilter, setCompanyFilter] = useState<string>("all");
+  const [originFilter, setOriginFilter] = useState<string>("all");
+  const [destinationFilter, setDestinationFilter] = useState<string>("all");
   const [selectedTruckId, setSelectedTruckId] = useState<string | null>(null);
   const [simulationActive, setSimulationActive] = useState(true);
+
+  // Entry points visibility
+  const [showPorts, setShowPorts] = useState(true);
+  const [showAirports, setShowAirports] = useState(true);
+  const [showBorders, setShowBorders] = useState(true);
+
+  // Entry points data
+  const allEntryPoints: EntryPoint[] = [
+    ...entryPointsData.ports,
+    ...entryPointsData.airports,
+    ...entryPointsData.borderCrossings,
+  ] as EntryPoint[];
 
   // Load Google Maps API
   useEffect(() => {
@@ -118,6 +136,25 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
     return () => clearInterval(interval);
   }, [simulationActive]);
 
+  // Get unique origins and destinations for filters
+  const getUniqueOrigins = () => {
+    const origins = [
+      ...new Set(trucks.map((truck) => truck.origin.id).filter(Boolean)),
+    ];
+    return origins
+      .map((id) => allEntryPoints.find((ep) => ep.id === id))
+      .filter(Boolean) as EntryPoint[];
+  };
+
+  const getUniqueDestinations = () => {
+    const destinations = [
+      ...new Set(trucks.map((truck) => truck.destination.id).filter(Boolean)),
+    ];
+    return destinations
+      .map((id) => allEntryPoints.find((ep) => ep.id === id))
+      .filter(Boolean) as EntryPoint[];
+  };
+
   // Update truck markers
   useEffect(() => {
     if (!isMapLoaded || !mapInstanceRef.current) return;
@@ -142,6 +179,17 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
 
       // Company filter
       if (companyFilter !== "all" && truck.company !== companyFilter)
+        return false;
+
+      // Origin filter
+      if (originFilter !== "all" && truck.origin.id !== originFilter)
+        return false;
+
+      // Destination filter
+      if (
+        destinationFilter !== "all" &&
+        truck.destination.id !== destinationFilter
+      )
         return false;
 
       // Alerts filter
@@ -213,6 +261,8 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
     showTrucks,
     statusFilter,
     companyFilter,
+    originFilter,
+    destinationFilter,
     showOnlyWithAlerts,
     selectedTruckId,
     selectTruck,
@@ -714,6 +764,156 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
           </label>
         </div>
 
+        {/* Origin Filter */}
+        <div style={{ marginBottom: "12px" }}>
+          <label
+            style={{
+              fontSize: "12px",
+              fontWeight: "600",
+              color: "#666",
+              marginBottom: "6px",
+              display: "block",
+            }}
+          >
+            Filter by Origin:
+          </label>
+          <select
+            value={originFilter}
+            onChange={(e) => setOriginFilter(e.target.value)}
+            style={{
+              width: "100%",
+              padding: "6px 8px",
+              borderRadius: "6px",
+              border: "1px solid #ddd",
+              fontSize: "13px",
+            }}
+          >
+            <option value="all">All Origins</option>
+            {getUniqueOrigins().map((origin) => (
+              <option key={origin.id} value={origin.id}>
+                {origin.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Destination Filter */}
+        <div style={{ marginBottom: "12px" }}>
+          <label
+            style={{
+              fontSize: "12px",
+              fontWeight: "600",
+              color: "#666",
+              marginBottom: "6px",
+              display: "block",
+            }}
+          >
+            Filter by Destination:
+          </label>
+          <select
+            value={destinationFilter}
+            onChange={(e) => setDestinationFilter(e.target.value)}
+            style={{
+              width: "100%",
+              padding: "6px 8px",
+              borderRadius: "6px",
+              border: "1px solid #ddd",
+              fontSize: "13px",
+            }}
+          >
+            <option value="all">All Destinations</option>
+            {getUniqueDestinations().map((destination) => (
+              <option key={destination.id} value={destination.id}>
+                {destination.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Entry Points Visibility */}
+        <div
+          style={{
+            marginBottom: "12px",
+            padding: "8px",
+            background: "#f8f9fa",
+            borderRadius: "6px",
+          }}
+        >
+          <div
+            style={{
+              fontWeight: "600",
+              marginBottom: "8px",
+              color: "#333",
+              fontSize: "12px",
+            }}
+          >
+            🏢 Entry Points Visibility:
+          </div>
+
+          <div style={{ marginBottom: "6px" }}>
+            <label
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                cursor: "pointer",
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={showPorts}
+                onChange={(e) => setShowPorts(e.target.checked)}
+                style={{ transform: "scale(1.1)" }}
+              />
+              <span style={{ fontSize: "12px", color: "#1976D2" }}>
+                ⚓ Seaports
+              </span>
+            </label>
+          </div>
+
+          <div style={{ marginBottom: "6px" }}>
+            <label
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                cursor: "pointer",
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={showAirports}
+                onChange={(e) => setShowAirports(e.target.checked)}
+                style={{ transform: "scale(1.1)" }}
+              />
+              <span style={{ fontSize: "12px", color: "#FF9800" }}>
+                ✈️ Airports
+              </span>
+            </label>
+          </div>
+
+          <div>
+            <label
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                cursor: "pointer",
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={showBorders}
+                onChange={(e) => setShowBorders(e.target.checked)}
+                style={{ transform: "scale(1.1)" }}
+              />
+              <span style={{ fontSize: "12px", color: "#4CAF50" }}>
+                🚪 Border Crossings
+              </span>
+            </label>
+          </div>
+        </div>
+
         {/* Simulation Control */}
         <div>
           <label
@@ -739,6 +939,20 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
 
       {/* Map Container */}
       <div ref={mapRef} style={{ width: "100%", height: "100%" }} />
+
+      {/* Entry Points Layer */}
+      {isMapLoaded && mapInstanceRef.current && (
+        <EntryPointsLayer
+          map={mapInstanceRef.current}
+          entryPoints={allEntryPoints}
+          showPorts={showPorts}
+          showAirports={showAirports}
+          showBorders={showBorders}
+          onEntryPointClick={(entryPoint) => {
+            console.log("Entry point clicked:", entryPoint);
+          }}
+        />
+      )}
 
       {/* Instructions */}
       <div

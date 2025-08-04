@@ -13,22 +13,33 @@
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "Jeddah Islamic Port",
+      "name": "ميناء جدة الإسلامي",
+      "nameEn": "Jeddah Islamic Port",
       "lat": 21.4858,
-      "lng": 39.1925
+      "lng": 39.1925,
+      "type": "seaport",
+      "id": "port_jeddah"
     },
     "origin": {
-      "name": "Riyadh Industrial City",
-      "lat": 24.7136,
-      "lng": 46.6753
+      "name": "مطار الملك خالد الدولي - الرياض",
+      "nameEn": "King Khalid International Airport - Riyadh",
+      "lat": 24.9576,
+      "lng": 46.6988,
+      "type": "airport",
+      "id": "airport_riyadh"
     },
-    "route": "Highway 40 - Riyadh to Jeddah (950 km)",
+    "route": "Highway 40 - Airport Riyadh to Port Jeddah (950 km)",
     "status": "moving",
     "speed": 85,
     "heading": 270,
     "fuel": 75,
     "battery": 90,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 24.3156,
+      "lng": 46.1934,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [
       {
         "id": "alert-001",
@@ -42,10 +53,11 @@
       }
     ],
     "cargo": {
-      "type": "Electronics & Consumer Goods",
+      "type": "Import Electronics from Dubai",
       "weight": "35 tons",
       "value": "2,500,000 SAR",
-      "dangerous": false
+      "dangerous": false,
+      "customsStatus": "Cleared"
     }
   },
   {
@@ -62,28 +74,40 @@
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "King Fahd Industrial Port - Yanbu",
+      "name": "ميناء الملك فهد الصناعي - ينبع",
+      "nameEn": "King Fahd Industrial Port - Yanbu",
       "lat": 24.0889,
-      "lng": 38.0617
+      "lng": 38.0617,
+      "type": "seaport",
+      "id": "port_yanbu"
     },
     "origin": {
-      "name": "Dammam Port",
+      "name": "ميناء الملك عبدالعزيز - الدمام",
+      "nameEn": "King Abdulaziz Port - Dammam",
       "lat": 26.4207,
-      "lng": 50.0888
+      "lng": 50.0888,
+      "type": "seaport",
+      "id": "port_dammam"
     },
-    "route": "Highway 50 - Dammam to Yanbu (1,200 km)",
+    "route": "Highway 50 - Port Dammam to Port Yanbu (1,200 km)",
     "status": "moving",
     "speed": 78,
     "heading": 245,
     "fuel": 68,
     "battery": 85,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 26.2234,
+      "lng": 49.9765,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [],
     "cargo": {
-      "type": "Petrochemicals",
+      "type": "Export Petrochemicals to Europe",
       "weight": "32 tons",
       "value": "1,800,000 SAR",
-      "dangerous": true
+      "dangerous": true,
+      "customsStatus": "In Transit"
     }
   },
   {
@@ -95,27 +119,38 @@
     "truckType": "Refrigerated Truck - Scania R500",
     "capacity": "25 tons",
     "currentPosition": {
-      "lat": 21.2854,
-      "lng": 40.4183,
+      "lat": 25.2854,
+      "lng": 48.8183,
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "Al-Khobar Distribution Center",
-      "lat": 26.2172,
-      "lng": 50.1971
+      "name": "منفذ البطحاء الحدودي",
+      "nameEn": "Al-Batha Border Crossing",
+      "lat": 25.9667,
+      "lng": 48.4167,
+      "type": "border",
+      "id": "border_batha"
     },
     "origin": {
-      "name": "Jeddah Central Market",
+      "name": "ميناء جدة الإسلامي",
+      "nameEn": "Jeddah Islamic Port",
       "lat": 21.4858,
-      "lng": 39.1925
+      "lng": 39.1925,
+      "type": "seaport",
+      "id": "port_jeddah"
     },
-    "route": "Highway 5 - Jeddah to Al-Khobar (1,350 km)",
+    "route": "Highway 5 - Port Jeddah to Kuwait Border (1,100 km)",
     "status": "moving",
     "speed": 82,
     "heading": 65,
     "fuel": 82,
     "battery": 92,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 24.9854,
+      "lng": 48.2183,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [
       {
         "id": "alert-003",
@@ -129,10 +164,11 @@
       }
     ],
     "cargo": {
-      "type": "Frozen Foods & Dairy Products",
+      "type": "Export Frozen Foods to Kuwait",
       "weight": "22 tons",
       "value": "450,000 SAR",
-      "dangerous": false
+      "dangerous": false,
+      "customsStatus": "Export Cleared"
     }
   },
   {
@@ -145,26 +181,37 @@
     "capacity": "45 tons",
     "currentPosition": {
       "lat": 28.3998,
-      "lng": 36.5700,
+      "lng": 36.57,
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "NEOM Industrial Zone",
-      "lat": 28.2743,
-      "lng": 34.7073
+      "name": "منفذ الجوهرة الحدودي",
+      "nameEn": "Al-Jawhara Border Crossing",
+      "lat": 29.9833,
+      "lng": 40.9167,
+      "type": "border",
+      "id": "border_jawhara"
     },
     "origin": {
-      "name": "Tabuk Refinery",
-      "lat": 28.3998,
-      "lng": 36.5700
+      "name": "ميناء الملك فهد الصناعي - ينبع",
+      "nameEn": "King Fahd Industrial Port - Yanbu",
+      "lat": 24.0889,
+      "lng": 38.0617,
+      "type": "seaport",
+      "id": "port_yanbu"
     },
-    "route": "Highway 15 - Tabuk to NEOM (280 km)",
+    "route": "Highway 15 - Port Yanbu to Jordan Border (650 km)",
     "status": "moving",
     "speed": 65,
     "heading": 315,
     "fuel": 90,
     "battery": 88,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 29.2998,
+      "lng": 40.77,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [
       {
         "id": "alert-004",
@@ -178,10 +225,11 @@
       }
     ],
     "cargo": {
-      "type": "Diesel Fuel",
+      "type": "Export Diesel Fuel to Jordan",
       "weight": "42 tons",
       "value": "180,000 SAR",
-      "dangerous": true
+      "dangerous": true,
+      "customsStatus": "Export Processing"
     }
   },
   {
@@ -198,28 +246,40 @@
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "Abha Regional Airport",
+      "name": "مطار أبها الإقليمي",
+      "nameEn": "Abha Regional Airport",
       "lat": 18.2404,
-      "lng": 42.6566
+      "lng": 42.6566,
+      "type": "airport",
+      "id": "airport_abha"
     },
     "origin": {
-      "name": "Jazan Economic City",
-      "lat": 16.9010,
-      "lng": 42.5663
+      "name": "ميناء جازان",
+      "nameEn": "Jazan Port",
+      "lat": 16.901,
+      "lng": 42.5663,
+      "type": "seaport",
+      "id": "port_jizan"
     },
-    "route": "Highway 15 - Jazan to Abha (200 km)",
+    "route": "Highway 15 - Port Jazan to Airport Abha (200 km)",
     "status": "moving",
     "speed": 55,
     "heading": 25,
     "fuel": 65,
     "battery": 78,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 17.9164,
+      "lng": 42.4053,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [],
     "cargo": {
-      "type": "Construction Materials",
+      "type": "Import Construction Materials from Yemen",
       "weight": "28 tons",
       "value": "320,000 SAR",
-      "dangerous": false
+      "dangerous": false,
+      "customsStatus": "Import Cleared"
     }
   },
   {
@@ -231,27 +291,38 @@
     "truckType": "Box Truck - Iveco Stralis",
     "capacity": "20 tons",
     "currentPosition": {
-      "lat": 21.3891,
-      "lng": 39.8579,
+      "lat": 26.1891,
+      "lng": 50.1579,
       "timestamp": "2024-01-15T10:30:00Z"
     },
     "destination": {
-      "name": "Mecca Grand Mosque Area",
-      "lat": 21.4225,
-      "lng": 39.8262
+      "name": "جسر الملك فهد",
+      "nameEn": "King Fahd Causeway",
+      "lat": 26.2333,
+      "lng": 50.3,
+      "type": "border",
+      "id": "border_king_fahd_causeway"
     },
     "origin": {
-      "name": "Jeddah King Abdulaziz Airport",
-      "lat": 21.6796,
-      "lng": 39.1564
+      "name": "مطار الملك فهد الدولي - الدمام",
+      "nameEn": "King Fahd International Airport - Dammam",
+      "lat": 26.4712,
+      "lng": 49.7979,
+      "type": "airport",
+      "id": "airport_dammam"
     },
-    "route": "Highway 40 - Jeddah to Mecca (80 km)",
+    "route": "Highway 605 - Airport Dammam to Bahrain Bridge (85 km)",
     "status": "stopped",
     "speed": 0,
     "heading": 90,
     "fuel": 45,
     "battery": 95,
     "lastUpdate": "2024-01-15T10:30:00Z",
+    "previousPosition": {
+      "lat": 26.3891,
+      "lng": 49.9579,
+      "timestamp": "2024-01-15T10:27:00Z"
+    },
     "alerts": [
       {
         "id": "alert-006",
@@ -265,10 +336,11 @@
       }
     ],
     "cargo": {
-      "type": "Religious Supplies & Books",
+      "type": "Export Electronics to Bahrain",
       "weight": "15 tons",
       "value": "250,000 SAR",
-      "dangerous": false
+      "dangerous": false,
+      "customsStatus": "Export Ready"
     }
   }
 ]
