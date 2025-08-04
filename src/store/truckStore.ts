@@ -13,8 +13,12 @@ import {
   MapViewport,
 } from "../types";
 
-// Import JSON data - Saudi Arabia Edition
-import saudiTrucksData from "../data/saudi_trucks.json";
+// Import JSON data - Saudi Arabia Edition with realistic simulation
+import realisticTrucksData from "../data/realistic_saudi_trucks.json";
+import {
+  simulateRealisticMovement,
+  generateRandomEvent,
+} from "../utils/realisticSimulation";
 import routesData from "../data/routes.json";
 import checkpointsData from "../data/checkpoints.json";
 import airportsData from "../data/airports.json";
@@ -22,7 +26,7 @@ import securityPointsData from "../data/security-points.json";
 
 // Initial state
 const initialState = {
-  trucks: saudiTrucksData as Truck[], // Load Saudi trucks immediately
+  trucks: realisticTrucksData as Truck[], // Load realistic Saudi trucks immediately
   routes: routesData as Route[], // Load routes immediately
   checkpoints: checkpointsData as any[], // Load checkpoints immediately
   airports: airportsData as any[], // Load airports immediately
@@ -108,7 +112,7 @@ export const useTruckStore = create<TruckStore>()(
           await new Promise((resolve) => setTimeout(resolve, 300));
 
           // In a real app, this would be an API call
-          const trucks = saudiTrucksData as Truck[];
+          const trucks = realisticTrucksData as Truck[];
           console.log("🚛 Store: Loaded", trucks.length, "trucks");
 
           set({
@@ -199,6 +203,44 @@ export const useTruckStore = create<TruckStore>()(
               : truck
           ),
           lastUpdate: new Date().toISOString(),
+        }));
+      },
+
+      // Realistic truck simulation update
+      updateTruckRealistic: (truckId: string) => {
+        set((state) => ({
+          trucks: state.trucks.map((truck) => {
+            if (truck.id !== truckId || truck.status !== "moving") return truck;
+
+            const updates = simulateRealisticMovement(truck);
+            const newEvents = generateRandomEvent(truck);
+
+            return {
+              ...truck,
+              ...updates,
+              alerts: [...truck.alerts, ...newEvents],
+              lastUpdate: new Date().toISOString(),
+            };
+          }),
+        }));
+      },
+
+      // Update all moving trucks with realistic simulation
+      updateAllMovingTrucks: () => {
+        set((state) => ({
+          trucks: state.trucks.map((truck) => {
+            if (truck.status !== "moving") return truck;
+
+            const updates = simulateRealisticMovement(truck);
+            const newEvents = generateRandomEvent(truck);
+
+            return {
+              ...truck,
+              ...updates,
+              alerts: [...truck.alerts.slice(-5), ...newEvents], // Keep only last 5 alerts
+              lastUpdate: new Date().toISOString(),
+            };
+          }),
         }));
       },
 

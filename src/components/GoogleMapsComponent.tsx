@@ -104,45 +104,19 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
     loadGoogleMaps();
   }, [onMapLoad]);
 
-  // Truck movement simulation
+  // Realistic truck movement simulation (like FlightRadar24)
   useEffect(() => {
     if (!simulationActive) return;
 
     const interval = setInterval(() => {
-      const { trucks: currentTrucks, updateTruckPosition } =
-        useTruckStore.getState();
+      const { updateAllMovingTrucks } = useTruckStore.getState();
 
-      currentTrucks.forEach((truck) => {
-        if (truck.status === "moving") {
-          // Calculate movement towards destination
-          const origin = truck.currentPosition;
-          const destination = truck.destination;
-
-          // Simple linear interpolation for movement
-          const progress = 0.001; // Small movement step
-          const newLat = origin.lat + (destination.lat - origin.lat) * progress;
-          const newLng = origin.lng + (destination.lng - origin.lng) * progress;
-
-          // Calculate heading (direction) based on movement
-          const deltaLat = destination.lat - origin.lat;
-          const deltaLng = destination.lng - origin.lng;
-          const heading = Math.atan2(deltaLng, deltaLat) * (180 / Math.PI);
-
-          // Update truck position and heading
-          updateTruckPosition(truck.id, {
-            lat: newLat,
-            lng: newLng,
-            timestamp: new Date().toISOString(),
-          });
-
-          // Update heading in truck data
-          truck.heading = (heading + 90) % 360; // Adjust for truck icon orientation
-        }
-      });
-    }, 2000); // Update every 2 seconds
+      // Update all moving trucks with realistic simulation
+      updateAllMovingTrucks();
+    }, 3000); // Update every 3 seconds for more realistic movement
 
     return () => clearInterval(interval);
-  }, [simulationActive, selectTruck]);
+  }, [simulationActive]);
 
   // Update truck markers
   useEffect(() => {
@@ -795,10 +769,13 @@ const GoogleMapsComponent: React.FC<GoogleMapsComponentProps> = ({
           • Orange dashed: remaining route
         </div>
         <div style={{ marginBottom: "6px" }}>
-          • 🎬 Live simulation: trucks move automatically
+          • 🎬 Realistic simulation: like FlightRadar24
         </div>
         <div style={{ marginBottom: "6px" }}>
-          • Truck icons rotate with direction
+          • Truck icons rotate with highway direction
+        </div>
+        <div style={{ marginBottom: "6px" }}>
+          • Real Saudi highways & traffic conditions
         </div>
         <div style={{ fontSize: "12px", color: "#666", marginTop: "8px" }}>
           Real-time Google Maps with Saudi Arabia

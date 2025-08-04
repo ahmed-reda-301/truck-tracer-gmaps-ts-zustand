@@ -1,0 +1,274 @@
+[
+  {
+    "id": "SAT001",
+    "plateNumber": "ر ق ب 1234",
+    "driverName": "أحمد محمد الراشد",
+    "driverPhone": "+966501234567",
+    "company": "Saudi Transport Co.",
+    "truckType": "Heavy Truck - Volvo FH16",
+    "capacity": "40 tons",
+    "currentPosition": {
+      "lat": 24.2156,
+      "lng": 45.8934,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "Jeddah Islamic Port",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "origin": {
+      "name": "Riyadh Industrial City",
+      "lat": 24.7136,
+      "lng": 46.6753
+    },
+    "route": "Highway 40 - Riyadh to Jeddah (950 km)",
+    "status": "moving",
+    "speed": 85,
+    "heading": 270,
+    "fuel": 75,
+    "battery": 90,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [
+      {
+        "id": "alert-001",
+        "truckId": "SAT001",
+        "truckPlateNumber": "ر ق ب 1234",
+        "truckDriverName": "أحمد محمد الراشد",
+        "type": "speed",
+        "message": "Speed limit exceeded on Highway 40 near Al-Qassim",
+        "severity": "warning",
+        "timestamp": "2024-01-15T10:25:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Electronics & Consumer Goods",
+      "weight": "35 tons",
+      "value": "2,500,000 SAR",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "GLT002",
+    "plateNumber": "ج د هـ 5678",
+    "driverName": "محمد سعد العتيبي",
+    "driverPhone": "+966502345678",
+    "company": "Gulf Logistics",
+    "truckType": "Container Truck - Mercedes Actros",
+    "capacity": "35 tons",
+    "currentPosition": {
+      "lat": 26.1234,
+      "lng": 49.8765,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "King Fahd Industrial Port - Yanbu",
+      "lat": 24.0889,
+      "lng": 38.0617
+    },
+    "origin": {
+      "name": "Dammam Port",
+      "lat": 26.4207,
+      "lng": 50.0888
+    },
+    "route": "Highway 50 - Dammam to Yanbu (1,200 km)",
+    "status": "moving",
+    "speed": 78,
+    "heading": 245,
+    "fuel": 68,
+    "battery": 85,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [],
+    "cargo": {
+      "type": "Petrochemicals",
+      "weight": "32 tons",
+      "value": "1,800,000 SAR",
+      "dangerous": true
+    }
+  },
+  {
+    "id": "DEX003",
+    "plateNumber": "ط ي ك 9012",
+    "driverName": "خالد عبدالله الغامدي",
+    "driverPhone": "+966503456789",
+    "company": "Desert Express",
+    "truckType": "Refrigerated Truck - Scania R500",
+    "capacity": "25 tons",
+    "currentPosition": {
+      "lat": 21.2854,
+      "lng": 40.4183,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "Al-Khobar Distribution Center",
+      "lat": 26.2172,
+      "lng": 50.1971
+    },
+    "origin": {
+      "name": "Jeddah Central Market",
+      "lat": 21.4858,
+      "lng": 39.1925
+    },
+    "route": "Highway 5 - Jeddah to Al-Khobar (1,350 km)",
+    "status": "moving",
+    "speed": 82,
+    "heading": 65,
+    "fuel": 82,
+    "battery": 92,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [
+      {
+        "id": "alert-003",
+        "truckId": "DEX003",
+        "truckPlateNumber": "ط ي ك 9012",
+        "truckDriverName": "خالد عبدالله الغامدي",
+        "type": "temperature",
+        "message": "Refrigeration temperature slightly high: -16°C (target: -18°C)",
+        "severity": "info",
+        "timestamp": "2024-01-15T10:20:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Frozen Foods & Dairy Products",
+      "weight": "22 tons",
+      "value": "450,000 SAR",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "RSC004",
+    "plateNumber": "ل م ن 3456",
+    "driverName": "عبدالرحمن أحمد الشهري",
+    "driverPhone": "+966504567890",
+    "company": "Red Sea Cargo",
+    "truckType": "Tanker Truck - MAN TGX",
+    "capacity": "45 tons",
+    "currentPosition": {
+      "lat": 28.3998,
+      "lng": 36.5700,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "NEOM Industrial Zone",
+      "lat": 28.2743,
+      "lng": 34.7073
+    },
+    "origin": {
+      "name": "Tabuk Refinery",
+      "lat": 28.3998,
+      "lng": 36.5700
+    },
+    "route": "Highway 15 - Tabuk to NEOM (280 km)",
+    "status": "moving",
+    "speed": 65,
+    "heading": 315,
+    "fuel": 90,
+    "battery": 88,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [
+      {
+        "id": "alert-004",
+        "truckId": "RSC004",
+        "truckPlateNumber": "ل م ن 3456",
+        "truckDriverName": "عبدالرحمن أحمد الشهري",
+        "type": "fuel",
+        "message": "Fuel consumption higher than expected due to mountain terrain",
+        "severity": "info",
+        "timestamp": "2024-01-15T10:15:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Diesel Fuel",
+      "weight": "42 tons",
+      "value": "180,000 SAR",
+      "dangerous": true
+    }
+  },
+  {
+    "id": "SAT005",
+    "plateNumber": "س ع و 7890",
+    "driverName": "فهد سليمان القحطاني",
+    "driverPhone": "+966505678901",
+    "company": "Saudi Transport Co.",
+    "truckType": "Flatbed Truck - DAF XF",
+    "capacity": "30 tons",
+    "currentPosition": {
+      "lat": 18.2164,
+      "lng": 42.5053,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "Abha Regional Airport",
+      "lat": 18.2404,
+      "lng": 42.6566
+    },
+    "origin": {
+      "name": "Jazan Economic City",
+      "lat": 16.9010,
+      "lng": 42.5663
+    },
+    "route": "Highway 15 - Jazan to Abha (200 km)",
+    "status": "moving",
+    "speed": 55,
+    "heading": 25,
+    "fuel": 65,
+    "battery": 78,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [],
+    "cargo": {
+      "type": "Construction Materials",
+      "weight": "28 tons",
+      "value": "320,000 SAR",
+      "dangerous": false
+    }
+  },
+  {
+    "id": "GLT006",
+    "plateNumber": "ح ط ي 2468",
+    "driverName": "ناصر محمد الدوسري",
+    "driverPhone": "+966506789012",
+    "company": "Gulf Logistics",
+    "truckType": "Box Truck - Iveco Stralis",
+    "capacity": "20 tons",
+    "currentPosition": {
+      "lat": 21.3891,
+      "lng": 39.8579,
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    "destination": {
+      "name": "Mecca Grand Mosque Area",
+      "lat": 21.4225,
+      "lng": 39.8262
+    },
+    "origin": {
+      "name": "Jeddah King Abdulaziz Airport",
+      "lat": 21.6796,
+      "lng": 39.1564
+    },
+    "route": "Highway 40 - Jeddah to Mecca (80 km)",
+    "status": "stopped",
+    "speed": 0,
+    "heading": 90,
+    "fuel": 45,
+    "battery": 95,
+    "lastUpdate": "2024-01-15T10:30:00Z",
+    "alerts": [
+      {
+        "id": "alert-006",
+        "truckId": "GLT006",
+        "truckPlateNumber": "ح ط ي 2468",
+        "truckDriverName": "ناصر محمد الدوسري",
+        "type": "stop",
+        "message": "Mandatory rest stop - Driver break time",
+        "severity": "info",
+        "timestamp": "2024-01-15T10:00:00Z"
+      }
+    ],
+    "cargo": {
+      "type": "Religious Supplies & Books",
+      "weight": "15 tons",
+      "value": "250,000 SAR",
+      "dangerous": false
+    }
+  }
+]

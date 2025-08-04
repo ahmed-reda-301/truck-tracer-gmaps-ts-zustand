@@ -255,6 +255,10 @@ export interface TruckActions {
   addAlert: (truckId: string, alert: Alert) => void;
   removeAlert: (truckId: string, alertId: string) => void;
 
+  // Realistic simulation
+  updateTruckRealistic: (truckId: string) => void;
+  updateAllMovingTrucks: () => void;
+
   // Filtering
   setFilters: (filters: Partial<TruckFilters>) => void;
   setTruckFilters: (filters: Partial<TruckFilters>) => void;
